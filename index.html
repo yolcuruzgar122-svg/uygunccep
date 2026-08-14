@@ -2,258 +2,283 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#e31b23">
 <meta name="google-site-verification" content="pkbNmxf8pPwzalKGJUTLTb9DqSnknmjq9tMhu9SRG9o">
-<title>UygunCep - Uygun Fiyatı Bul</title>
+
+<title>UygunCep - Ortalama Fiyat</title>
 
 <style>
 *{box-sizing:border-box}
+
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:#f5f6f8;
+background:#f4f5f7;
 color:#171717
 }
+
 .app{
-max-width:520px;
+max-width:600px;
 margin:auto;
 min-height:100vh;
 background:#fff
 }
+
 .top{
-padding:18px 18px 16px;
-background:linear-gradient(135deg,#e31b23,#b90009);
-color:white;
-border-radius:0 0 24px 24px
+padding:22px 17px 20px;
+background:linear-gradient(135deg,#e31b23,#a90008);
+color:#fff;
+border-radius:0 0 27px 27px
 }
+
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
-font-weight:900;
-font-size:25px
+font-size:27px;
+font-weight:900
 }
+
 .mark{
-width:44px;
-height:44px;
-border-radius:13px;
-background:white;
+width:45px;
+height:45px;
+border-radius:14px;
+background:#fff;
 color:#e31b23;
 display:grid;
 place-items:center;
-font-weight:1000;
-font-size:19px
+font-weight:1000
 }
+
 .sub{
-opacity:.9;
-margin:9px 0 18px
+margin:9px 0 18px;
+opacity:.9
 }
+
 .search{
 display:flex;
-background:white;
-border-radius:15px;
-padding:5px
+background:#fff;
+padding:5px;
+border-radius:16px
 }
+
 .search input{
 flex:1;
 border:0;
 outline:0;
-padding:12px;
+padding:13px;
 font-size:16px
 }
+
 .search button{
 border:0;
 background:#e31b23;
-color:white;
-border-radius:11px;
-padding:0 16px;
-font-weight:800
+color:#fff;
+border-radius:12px;
+padding:0 17px;
+font-weight:900
 }
+
 .content{
-padding:20px 16px 90px
+padding:18px 15px 90px
 }
-.title{
-font-size:22px;
-margin:6px 0
-}
-.muted{
-color:#777
-}
+
 .chips{
 display:flex;
 gap:8px;
 overflow:auto;
-padding:12px 0
+padding:8px 0 16px
 }
+
 .chip{
 white-space:nowrap;
 border:1px solid #ddd;
 background:#fff;
 border-radius:99px;
 padding:9px 13px;
-cursor:pointer
+font-weight:600
 }
+
 .chip.active{
-background:#ffe7e8;
+background:#ffe6e7;
 border-color:#e31b23;
-color:#c20e15;
-font-weight:700
+color:#c10e15
 }
+
+.hero{
+background:linear-gradient(135deg,#fff1f1,#fff);
+border:1px solid #f0d4d4;
+border-radius:19px;
+padding:18px;
+margin-bottom:18px
+}
+
+.hero h2{
+margin:0 0 7px
+}
+
+.hero p{
+margin:0;
+color:#777;
+font-size:14px;
+line-height:1.5
+}
+
+.stats{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:8px;
+margin:16px 0
+}
+
+.stat{
+background:#f7f7f7;
+border-radius:14px;
+padding:12px 6px;
+text-align:center
+}
+
+.stat b{
+display:block;
+font-size:15px
+}
+
+.stat span{
+font-size:11px;
+color:#777
+}
+
 .card{
-border:1px solid #e5e5e5;
-border-radius:17px;
-padding:14px;
+border:1px solid #e4e4e4;
+border-radius:18px;
+padding:13px;
 margin:12px 0;
-box-shadow:0 3px 14px #00000009
+box-shadow:0 3px 14px #0000000b
 }
-.prod{
+
+.product{
 display:flex;
-gap:13px
+gap:12px
 }
-.pic{
-width:92px;
-height:92px;
-border-radius:13px;
-background:#f0f1f3;
+
+.image{
+width:94px;
+height:94px;
+border-radius:14px;
 overflow:hidden;
+background:#eee;
 flex-shrink:0
 }
-.pic img{
+
+.image img{
 width:100%;
 height:100%;
 object-fit:cover
 }
-.prod h3{
-margin:2px 0 5px;
+
+.category{
+font-size:12px;
+color:#777
+}
+
+.product h3{
+margin:4px 0;
 font-size:16px
 }
-.price{
+
+.average{
 font-size:21px;
 font-weight:900;
 color:#e31b23
 }
-.store{
-font-size:13px;
-color:#777;
-margin-top:3px
-}
-.best{
+
+.badge{
 display:inline-block;
 background:#e9f8ee;
-color:#17833b;
-border-radius:8px;
+color:#16783a;
 padding:5px 8px;
+border-radius:8px;
 font-size:12px;
 font-weight:800;
 margin-top:6px
 }
-.go{
+
+.range{
+font-size:12px;
+color:#777;
+line-height:1.5;
+margin-top:6px
+}
+
+.stores{
+border-top:1px solid #eee;
+margin-top:12px;
+padding-top:12px;
+font-size:13px
+}
+
+.find{
 display:block;
 text-align:center;
 background:#171717;
-color:white;
+color:#fff;
 text-decoration:none;
 border-radius:11px;
-padding:11px;
-margin-top:12px;
-font-weight:800
+padding:12px;
+margin-top:11px;
+font-weight:900
 }
-.premium{
+
+.empty{
+text-align:center;
+padding:35px 15px;
+color:#777
+}
+
+.info{
 background:#171717;
-color:white;
+color:#fff;
 border-radius:18px;
 padding:18px;
-margin:20px 0
+margin-top:20px
 }
-.premium button{
-background:#e31b23;
-color:white;
-border:0;
-padding:11px 15px;
-border-radius:10px;
-font-weight:800
+
+.info p{
+color:#bbb;
+font-size:13px;
+line-height:1.5
 }
+
 .nav{
 position:fixed;
 bottom:0;
 left:50%;
 transform:translateX(-50%);
-width:min(520px,100%);
-height:68px;
-background:white;
+width:min(600px,100%);
+height:66px;
+background:#fff;
 border-top:1px solid #ddd;
 display:flex;
 justify-content:space-around;
 align-items:center;
-z-index:4
+z-index:5
 }
+
 .nav button{
 border:0;
 background:none;
 color:#777;
 font-size:12px
 }
-.nav button b{
+
+.nav b{
 display:block;
-font-size:22px
+font-size:21px
 }
+
 .nav .active{
 color:#e31b23
-}
-.empty{
-text-align:center;
-padding:30px;
-color:#777
-}
-.modal{
-display:none;
-position:fixed;
-inset:0;
-background:#0008;
-align-items:end;
-justify-content:center;
-z-index:5
-}
-.modal.show{
-display:flex
-}
-.sheet{
-background:white;
-width:min(520px,100%);
-border-radius:24px 24px 0 0;
-padding:22px
-}
-.close{
-float:right;
-border:0;
-background:#eee;
-border-radius:50%;
-width:34px;
-height:34px
-}
-.plans{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px
-}
-.plan{
-border:1px solid #ddd;
-border-radius:15px;
-padding:14px
-}
-.plan strong{
-font-size:22px
-}
-.pay{
-width:100%;
-border:0;
-background:#e31b23;
-color:#fff;
-padding:14px;
-border-radius:12px;
-font-weight:900;
-margin-top:12px
 }
 </style>
 </head>
@@ -270,65 +295,135 @@ UygunCep
 </div>
 
 <div class="sub">
-Aradığın ürünün uygun fiyatını bul.
+İnternetteki ürünlerin ortalama fiyatını bul.
 </div>
 
 <div class="search">
-<input id="q" placeholder="Ürün ara..." onkeydown="if(event.key==='Enter')search()">
-<button onclick="search()">Ara</button>
+
+<input
+id="searchInput"
+placeholder="Ürün ara..."
+onkeydown="if(event.key==='Enter')searchProducts()">
+
+<button onclick="searchProducts()">
+Ara
+</button>
+
 </div>
 
 </header>
+
 
 <main class="content">
 
 <div class="chips">
 
-<button class="chip active" onclick="category('Tümü',this)">🔥 Tümü</button>
+<button class="chip active"
+onclick="filterCategory('Tümü',this)">
+🔥 Tümü
+</button>
 
-<button class="chip" onclick="category('Telefon',this)">
+<button class="chip"
+onclick="filterCategory('Telefon',this)">
 📱 Telefon
 </button>
 
-<button class="chip" onclick="category('Oyun',this)">
-🎮 Oyun
-</button>
-
-<button class="chip" onclick="category('Bilgisayar',this)">
+<button class="chip"
+onclick="filterCategory('Bilgisayar',this)">
 💻 Bilgisayar
 </button>
 
-<button class="chip" onclick="category('Aksesuar',this)">
-🎧 Aksesuar
+<button class="chip"
+onclick="filterCategory('Oyun',this)">
+🎮 Oyun
+</button>
+
+<button class="chip"
+onclick="filterCategory('Elektronik',this)">
+🔌 Elektronik
+</button>
+
+<button class="chip"
+onclick="filterCategory('Ev',this)">
+🏠 Ev
+</button>
+
+<button class="chip"
+onclick="filterCategory('Giyim',this)">
+👕 Giyim
+</button>
+
+<button class="chip"
+onclick="filterCategory('Spor',this)">
+⚽ Spor
 </button>
 
 </div>
 
-<h2 class="title">Popüler Ürünler</h2>
 
-<p class="muted">
-UygunCep'teki örnek ürünler
+<div class="hero">
+
+<h2>🔎 Ortalama fiyatı bul</h2>
+
+<p>
+Bir ürün ara. UygunCep sana ürünün
+ortalama, en düşük ve en yüksek fiyatını
+göstermeye hazırlanıyor.
 </p>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<b id="productCount">100.000+</b>
+<span>Ürün</span>
+</div>
+
+<div class="stat">
+<b>8</b>
+<span>Kategori</span>
+</div>
+
+<div class="stat">
+<b>4+</b>
+<span>Mağaza</span>
+</div>
+
+</div>
+
+
+<h2>Popüler Ürünler</h2>
+
+<p style="color:#777">
+Ürünlerin yaklaşık piyasa fiyatlarını incele.
+</p>
+
 
 <div id="results"></div>
 
-<div class="premium">
 
-<h3 style="margin-top:0">
-⭐ UygunCep Premium
-</h3>
+<div class="info">
 
-<p style="color:#bbb">
-Fiyat geçmişi, gelişmiş karşılaştırma ve fiyat düşünce bildirimleri.
+<h3>💡 UygunCep</h3>
+
+<p>
+UygunCep farklı mağazalardaki fiyatları
+karşılaştırarak ürünlerin piyasa değerini
+anlamana yardımcı olacak.
 </p>
 
-<button onclick="openPremium()">
-50 TL / ay — Premium'a geç
-</button>
+<p>
+⚠️ Şu an gösterilen fiyatlar demo verisidir.
+Gerçek mağaza fiyatları API bağlantısı
+eklendiğinde kullanılacaktır.
+</p>
 
 </div>
 
 </main>
+
 
 <nav class="nav">
 
@@ -342,14 +437,9 @@ Ana Sayfa
 Ara
 </button>
 
-<button onclick="openPremium()">
-<b>★</b>
-Premium
-</button>
-
-<button>
-<b>♙</b>
-Hesabım
+<button onclick="window.scrollTo(0,0)">
+<b>↑</b>
+Yukarı
 </button>
 
 </nav>
@@ -357,131 +447,203 @@ Hesabım
 </div>
 
 
-<div class="modal" id="modal">
-
-<div class="sheet">
-
-<button class="close" onclick="closePremium()">×</button>
-
-<h2>UygunCep Premium</h2>
-
-<p class="muted">
-Aylık üyelik seçenekleri
-</p>
-
-<div class="plans">
-
-<div class="plan">
-<b>Aylık</b><br>
-<strong>50 TL</strong><br>
-<span class="muted">/ ay</span>
-</div>
-
-<div class="plan">
-<b>Premium</b><br>
-✓ Tüm sonuçlar<br>
-✓ Fiyat geçmişi<br>
-✓ Bildirimler
-</div>
-
-</div>
-
-<button class="pay" onclick="alert('Demo: ödeme sistemi henüz bağlı değil.')">
-50 TL ile devam et
-</button>
-
-<p class="muted" style="font-size:12px">
-Bu prototip gerçek ödeme almaz.
-</p>
-
-</div>
-</div>
-
-
 <script>
 
-const data=[
 
-{
-name:"Samsung Galaxy A56",
-category:"Telefon",
-price:"17.499 TL",
-store:"Örnek Mağaza",
-image:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500",
-link:"#"
-},
+/* =========================================
+   TEMEL ÜRÜNLER
+========================================= */
 
-{
-name:"iPhone 15",
-category:"Telefon",
-price:"39.999 TL",
-store:"Örnek Mağaza",
-image:"https://images.unsplash.com/photo-1592286927505-2fd0c9c1d0c5?w=500",
-link:"#"
-},
+const baseProducts=[
 
-{
-name:"PlayStation 5 Slim",
-category:"Oyun",
-price:"24.999 TL",
-store:"Örnek Mağaza",
-image:"https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=500",
-link:"#"
-},
+["iPhone 15","Telefon",39999,
+"https://images.unsplash.com/photo-1592286927505-2fd0c9c1d0c5?w=600"],
 
-{
-name:"Xbox Series X",
-category:"Oyun",
-price:"22.999 TL",
-store:"Örnek Mağaza",
-image:"https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=500",
-link:"#"
-},
+["iPhone 16","Telefon",53999,
+"https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600"],
 
-{
-name:"Oyuncu Laptop",
-category:"Bilgisayar",
-price:"29.999 TL",
-store:"Örnek Mağaza",
-image:"https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500",
-link:"#"
-},
+["Samsung Galaxy S25","Telefon",42999,
+"https://images.unsplash.com/photo-1610792516307-ea5acd9c3b8b?w=600"],
 
-{
-name:"Gaming PC",
-category:"Bilgisayar",
-price:"34.999 TL",
-store:"Örnek Mağaza",
-image:"https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500",
-link:"#"
-},
+["Samsung Galaxy A56","Telefon",17499,
+"https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600"],
 
-{
-name:"Kablosuz Kulaklık",
-category:"Aksesuar",
-price:"1.299 TL",
-store:"Örnek Mağaza",
-image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
-link:"#"
-},
+["Xiaomi Redmi Note","Telefon",10999,
+"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600"],
 
-{
-name:"Gaming Mouse",
-category:"Aksesuar",
-price:"899 TL",
-store:"Örnek Mağaza",
-image:"https://images.unsplash.com/photo-1527814050087-3793815479db?w=500",
-link:"#"
-}
+
+["Gaming Laptop","Bilgisayar",29999,
+"https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600"],
+
+["MacBook Air","Bilgisayar",42999,
+"https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=600"],
+
+["Gaming PC","Bilgisayar",34999,
+"https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=600"],
+
+
+["PlayStation 5 Slim","Oyun",24999,
+"https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600"],
+
+["Xbox Series X","Oyun",22999,
+"https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=600"],
+
+["Nintendo Switch","Oyun",17999,
+"https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=600"],
+
+
+["Kablosuz Kulaklık","Elektronik",1299,
+"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"],
+
+["Bluetooth Hoparlör","Elektronik",1899,
+"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600"],
+
+
+["Robot Süpürge","Ev",11999,
+"https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600"],
+
+["Airfryer","Ev",3499,
+"https://images.unsplash.com/photo-1585515320310-259814833e62?w=600"],
+
+
+["Spor Ayakkabı","Giyim",2499,
+"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"],
+
+["Mont","Giyim",2999,
+"https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600"],
+
+
+["Koşu Bandı","Spor",18999,
+"https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=600"],
+
+["Fitness Bisikleti","Spor",12999,
+"https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600"]
 
 ];
 
 
-function render(items=data){
+/* =========================================
+   MAĞAZALAR
+========================================= */
 
-const results=document.getElementById("results");
+const stores=[
 
-if(!items.length){
+"Trendyol",
+"Hepsiburada",
+"Amazon Türkiye",
+"n11"
+
+];
+
+
+/* =========================================
+   100.000 DEMO ÜRÜN
+========================================= */
+
+const products=[];
+
+for(let i=0;i<100000;i++){
+
+const base=
+baseProducts[i%baseProducts.length];
+
+const variation=
+Math.floor(i/baseProducts.length)+1;
+
+const basePrice=
+base[2];
+
+const average=
+Math.round(
+basePrice*
+(0.90+((i%21)/100))
+);
+
+const min=
+Math.round(average*0.90);
+
+const max=
+Math.round(average*1.12);
+
+products.push({
+
+id:i+1,
+
+name:
+base[0]+" "+variation,
+
+category:
+base[1],
+
+average:
+average,
+
+min:
+min,
+
+max:
+max,
+
+image:
+base[3],
+
+store:
+stores[i%stores.length]
+
+});
+
+}
+
+
+/* =========================================
+   PARA
+========================================= */
+
+function money(value){
+
+return new Intl.NumberFormat(
+"tr-TR"
+).format(value)+" TL";
+
+}
+
+
+/* =========================================
+   MAĞAZA LİNKİ
+========================================= */
+
+function storeLink(product){
+
+const q=
+encodeURIComponent(product.name);
+
+if(product.store==="Trendyol")
+return "https://www.trendyol.com/sr?q="+q;
+
+if(product.store==="Hepsiburada")
+return "https://www.hepsiburada.com/ara?q="+q;
+
+if(product.store==="Amazon Türkiye")
+return "https://www.amazon.com.tr/s?k="+q;
+
+if(product.store==="n11")
+return "https://www.n11.com/arama?q="+q;
+
+return "#";
+
+}
+
+
+/* =========================================
+   GÖSTER
+========================================= */
+
+function render(list){
+
+const results=
+document.getElementById("results");
+
+if(!list.length){
 
 results.innerHTML=
 '<div class="empty">🔎 Ürün bulunamadı.</div>';
@@ -490,39 +652,84 @@ return;
 
 }
 
-results.innerHTML=items.map(x=>`
+
+/*
+Telefonu yormamak için
+ilk 30 sonucu gösteriyoruz.
+*/
+
+const visible=
+list.slice(0,30);
+
+
+results.innerHTML=
+visible.map(p=>`
 
 <div class="card">
 
-<div class="prod">
+<div class="product">
 
-<div class="pic">
+<div class="image">
 
-<img src="${x.image}" alt="${x.name}" loading="lazy">
+<img
+src="${p.image}"
+alt="${p.name}"
+loading="lazy">
 
 </div>
 
 <div>
 
-<h3>${x.name}</h3>
-
-<div class="price">${x.price}</div>
-
-<div class="store">
-${x.store}
+<div class="category">
+${p.category}
 </div>
 
-<span class="best">
-✓ Örnek fiyat
+<h3>
+${p.name}
+</h3>
+
+<div class="average">
+${money(p.average)}
+</div>
+
+<span class="badge">
+✓ Ortalama fiyat
 </span>
 
+<div class="range">
+
+📉 En düşük:
+${money(p.min)}
+
+<br>
+
+📈 En yüksek:
+${money(p.max)}
+
+</div>
+
 </div>
 
 </div>
 
-<a class="go" href="${x.link}">
-Mağazaya Git →
+
+<div class="stores">
+
+🏪 ${p.store}
+
+</div>
+
+
+<a
+class="find"
+href="${storeLink(p)}"
+target="_blank"
+rel="noopener">
+
+🛒 Mağazayı Bul →
+
 </a>
+
 
 </div>
 
@@ -531,22 +738,73 @@ Mağazaya Git →
 }
 
 
-function search(){
+/* =========================================
+   ARAMA
+========================================= */
 
-let q=document
-.getElementById("q")
+function searchProducts(){
+
+const q=
+document
+.getElementById("searchInput")
 .value
 .toLowerCase()
 .trim();
 
+if(!q){
+
+render(products);
+
+return;
+
+}
+
+const result=
+products.filter(p=>
+
+p.name
+.toLowerCase()
+.includes(q)
+
+||
+
+p.category
+.toLowerCase()
+.includes(q)
+
+);
+
+render(result);
+
+}
+
+
+/* =========================================
+   KATEGORİ
+========================================= */
+
+function filterCategory(category,button){
+
+document
+.querySelectorAll(".chip")
+.forEach(x=>
+x.classList.remove("active")
+);
+
+button.classList.add("active");
+
+if(category==="Tümü"){
+
+render(products);
+
+return;
+
+}
+
 render(
 
-data.filter(x=>
-
-x.name.toLowerCase().includes(q) ||
-
-x.category.toLowerCase().includes(q)
-
+products.filter(
+p=>p.category===category
 )
 
 );
@@ -554,57 +812,32 @@ x.category.toLowerCase().includes(q)
 }
 
 
-function category(cat,button){
-
-document
-.querySelectorAll(".chip")
-.forEach(x=>x.classList.remove("active"));
-
-button.classList.add("active");
-
-if(cat==="Tümü"){
-
-render(data);
-
-}else{
-
-render(
-data.filter(x=>x.category===cat)
-);
-
-}
-
-}
-
+/* =========================================
+   ARAMAYA ODAKLAN
+========================================= */
 
 function focusSearch(){
 
-document.getElementById("q").focus();
+document
+.getElementById("searchInput")
+.focus();
 
 window.scrollTo(0,0);
 
 }
 
 
-function openPremium(){
+/* =========================================
+   BAŞLAT
+========================================= */
 
 document
-.getElementById("modal")
-.classList.add("show");
+.getElementById("productCount")
+.textContent=
+new Intl.NumberFormat("tr-TR")
+.format(products.length)+"+";
 
-}
-
-
-function closePremium(){
-
-document
-.getElementById("modal")
-.classList.remove("show");
-
-}
-
-
-render();
+render(products);
 
 </script>
 
